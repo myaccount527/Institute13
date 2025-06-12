@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search-Institute</title>
+          <style>
+    body { font-family: Arial, sans-serif;}
+    input, button { padding: 10px; font-size: 16px; margin-top: 10px; }
+    #result { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+  </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <img class="logo1" src="images/institute2.png" alt=logo-institute><br><br>
+      <div class="home1">
+        <a href="index.html"><b>Home</b></a>
+        <a href="class.html"><b>Classes</b></a>
+      </div>
+        <p class="p3">Selected Information:</p>
+      <div id="info"></div>
+      <div>
+        <p class="p7">Write topic name below:</p>
+      </div>
+  <input type="text" id="topicInput" placeholder="Enter Topic">
+  <button onclick="searchAI()">Search</button>
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+
+    </body>
+</html>
