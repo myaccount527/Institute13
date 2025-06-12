@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select board-Institute</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <img class="logo1" src="images/institute2.png" alt=logo-institute><br><br>
+      <div class="home1">
+        <a href="index.html"><b>Home</b></a>
+        <a href="class.html"><b>Classes</b></a>
+      </div>
+      <div>
+        <p class="p7">Now , please select your board: </p>
+      </div>
+      <div>
+        <button class="class1" onclick="selectBoard('Punjab Board')"><b>Punjab Board(<i class="cou1">Pakistan</i>)</b></button><br><br>
+        <button class="class1" onclick="selectBoard('Federal Board')"><b>Federal Board(<i class="cou1">Pakistan</i>)</b></button><br><br>
+        <button class="class1" onclick="selectBoard('CBSE')"><b>CBSE(<i class="cou1">India</i>)</b></button><br><br>
+        <button class="class1" onclick="selectBoard('Cambridge')"><b>Cambridge(<i class="cou1">International</i>)</b></button>
+      </div><br><br><br>
+<script>
+      function selectBoard(board) {
+      const params = new URLSearchParams(window.location.search);
+      const classValue = params.get("class");
+      const typeValue = params.get("type");
+
+      if (!classValue || !typeValue) {
+        alert("Class or type not found in URL");
+        return;
+      }
+
+      const nextUrl = `Search.html?class=${classValue}&type=${typeValue}&board=${encodeURIComponent(board)}`;
+      window.location.href = nextUrl;
+    }
+</script>
+    </body>
+</html>
